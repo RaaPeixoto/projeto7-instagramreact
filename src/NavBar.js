@@ -1,11 +1,16 @@
-
+function Icones (props){
+  return (
+  <ion-icon name={props.nome}></ion-icon>
+  )
+}
 
 export default function NavBar (){
+  const icones = ["paper-plane-outline","compass-outline","heart-outline","person-outline"]
     return (
     <div class="navbar">
       <div class="container">
         <div class="logo">
-          <ion-icon name="logo-instagram"></ion-icon>
+          <Icones nome="logo-instagram"/> 
           <div class="separador"></div>
           <img src="/img/logo.png" alt ="logo"/>
         </div>
@@ -23,14 +28,12 @@ export default function NavBar (){
         </div>
 
         <div class="icones">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
+        {icones.map((i)=> <Icones nome={i} /> )}
         </div>
 
         <div class="icones-mobile">
-          <ion-icon name="paper-plane-outline"></ion-icon>
+        <Icones nome="paper-plane-outline"/> 
+    
         </div>
       </div>
     </div>
