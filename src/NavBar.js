@@ -1,18 +1,21 @@
-function Icones (props){
-  return (
-  <ion-icon name={props.nome}></ion-icon>
-  )
+function Icones(props) {
+  return <ion-icon name={props.nome}></ion-icon>;
 }
 
-export default function NavBar (){
-  const icones = ["paper-plane-outline","compass-outline","heart-outline","person-outline"]
-    return (
+export default function NavBar() {
+  const icones = [
+    "paper-plane-outline",
+    "compass-outline",
+    "heart-outline",
+    "person-outline",
+  ];
+  return (
     <div class="navbar">
       <div class="container">
         <div class="logo">
-          <Icones nome="logo-instagram"/> 
+          <Icones nome="logo-instagram" />
           <div class="separador"></div>
-          <img src="/img/logo.png" alt ="logo"/>
+          <img src="/img/logo.png" alt="logo" />
         </div>
 
         <div class="logo-mobile">
@@ -20,7 +23,7 @@ export default function NavBar (){
         </div>
 
         <div class="instagram-mobile">
-          <img src="/img/logo.png" alt ="logo"/>
+          <img src="/img/logo.png" alt="logo" />
         </div>
 
         <div class="pesquisa">
@@ -28,14 +31,15 @@ export default function NavBar (){
         </div>
 
         <div class="icones">
-        {icones.map((i)=> <Icones nome={i} /> )}
+          {icones.map((i) => (
+            <Icones nome={i} />
+          ))}
         </div>
 
         <div class="icones-mobile">
-        <Icones nome="paper-plane-outline"/> 
-    
+          <Icones nome="paper-plane-outline" />
         </div>
       </div>
     </div>
-    )
+  );
 }
