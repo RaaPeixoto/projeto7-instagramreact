@@ -1,9 +1,9 @@
 import React from "react";
 
-function ItemUsuario (props) {
-  const fotoPadrao = props.foto
-  const nomePadrao = props.nome
-  const [foto, setFoto] = React.useState(fotoPadrao );
+function ItemUsuario(props) {
+  const fotoPadrao = props.foto;
+  const nomePadrao = props.nome;
+  const [foto, setFoto] = React.useState(fotoPadrao);
   const [nome, setNome] = React.useState(nomePadrao);
   function ModificarImagem() {
     const alterarFoto = prompt("Insira o link da imagem do seu perfil!");
@@ -16,7 +16,7 @@ function ItemUsuario (props) {
   }
   return (
     <>
-    <img
+      <img
         src={
           foto === "" || foto === null || foto === undefined
             ? fotoPadrao
@@ -35,18 +35,16 @@ function ItemUsuario (props) {
           <ion-icon name="pencil" onClick={ModificarNome}></ion-icon>
         </span>
       </div>
-      </>
-  )
+    </>
+  );
 }
 
-
 export default function Usuario() {
+  const usuarioPadrao = { nome: "Catana", foto: "/img/catanacomics.svg" };
 
-  const usuarioPadrao= {nome:"Catana", foto:"/img/catanacomics.svg"};
-  
   return (
     <div class="usuario">
-    <ItemUsuario nome ={usuarioPadrao.nome} foto={usuarioPadrao.foto} />
+      <ItemUsuario nome={usuarioPadrao.nome} foto={usuarioPadrao.foto} />
     </div>
-  )
+  );
 }

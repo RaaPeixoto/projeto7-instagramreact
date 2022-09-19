@@ -82,7 +82,7 @@ function ItemPost(props) {
           <img src={props.perfilCurtida} alt="perfil" />
           <div class="texto">
             Curtido por <strong>{props.nomeCurtida} </strong> e{" "}
-            <strong>outras {curtidas} pessoas</strong>
+            <strong>outras {(curtidas).toLocaleString('de-DE')} pessoas</strong>
           </div>
         </div>
       </div>
